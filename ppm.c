@@ -59,7 +59,7 @@ int ImageLoad_PPM(char *filename, Image *img)
 	printf("Size image %lu %lu => %d\n", img->sizeX, img->sizeY, size);
 	img->data = (GLubyte *) malloc ((size_t) size * sizeof (GLubyte));
 	assert(img->data);
-									
+
 
     //read pixel data from file
     if (fread(img->data, (size_t) 1, (size_t) size, fp) == 0) {
@@ -83,7 +83,7 @@ int ImageLoad_PPM(char *filename, Image *img)
 		  *ptrfin = tmp;
 		  ptrfin++;
 		  ptrdeb++;
-	  }		
+	  }
 	}
     fclose(fp);
     return 1;
@@ -115,4 +115,3 @@ void imagesave_PPM(char *filename, Image *img)
     fwrite(img->data, (size_t) 1, (size_t) (3 * img->sizeX * img->sizeY), fp);
     fclose(fp);
 }
-

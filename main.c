@@ -92,10 +92,14 @@ void menuFunc(int item) {
     exit(0);
     break;
   case 1:
+    break;
   case 2:
+    break;
   case 3:
-    grisgris(image); break;
-    Display();
+    clut(image);
+    //voronoi(image);
+    //Display();
+    break;
   case 4:
     printf("Tout gris\n");
 	gris_uniforme(image);
